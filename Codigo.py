@@ -1,4 +1,5 @@
 import random
+import time
 
 print("=========================================")
 print("          ¡Bienvenido al juego!          ")
@@ -56,6 +57,7 @@ adivinado = 0
 
 
 while numero != adivinado:
+    tiempo_inicio=time.time()
     adivinado = input(f"Adivina un número entre {inicio} y {final}: ")
 
     while adivinado.isnumeric() == False:
@@ -68,4 +70,7 @@ while numero != adivinado:
     elif numero > adivinado:
         print("Este número es muy pequeño")
 
-print("¡Felicidades! Adivinaste el número")
+print("¡Felicidades! Adivinaste el número"+"\n")
+tiempo_final= time.time()
+tiempo_transcurrido=tiempo_final - tiempo_inicio
+print("Tiempo transcurrido: %0.10f segundos." % tiempo_transcurrido)
