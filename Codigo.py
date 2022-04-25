@@ -1,14 +1,16 @@
 import random
 import time
 
-print("=========================================")
-print("          ¡Bienvenido al juego!          ")
-print("=========================================")
-
-print("El objetivo del juego es adivinar cual es el número"+"\n")
+print("===================================================")
+print("               ¡Bienvenido al juego!               ")
+print("===================================================")
 
 inicio = int(1)
 final = int(10)
+
+print(f"El programa escoge un número al azar entre los límites predeterminados de {inicio} al {final} o puedes establecerlos tú mismo. "
+      f"Tú tienes como objetivo encontrar el número que la computadora escogio al azar"+"\n")
+
 
 print(f"El juego escoge el número {inicio} como el límite inicial y el número {final} como el límite final para escoger el número aleatorio a adivinar"
           f", si desea cambiar los números correspondientes:"+"\n"+"Pulsar el número 0 para empezar a jugar"+"\n"+"Pulsar el valor 1 para cambiar los valores."+"\n")
@@ -50,10 +52,9 @@ while True:
         print("El valor ingresado no es válido, solo ingresar 0 o 1")
 
 
-
 numero = random.randint(inicio,final)
-print(numero)
-adivinado = 0
+#print(numero)
+adivinado = ""
 
 
 while numero != adivinado:
