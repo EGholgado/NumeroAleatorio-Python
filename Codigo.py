@@ -53,12 +53,11 @@ while True:
 
 
 numero = random.randint(inicio,final)
-#print(numero)
+paso = 0
 adivinado = ""
-
-
 while numero != adivinado:
     tiempo_inicio=time.time()
+    paso +=1
     adivinado = input(f"Adivina un número entre {inicio} y {final}: ")
 
     while adivinado.isnumeric() == False:
@@ -75,3 +74,4 @@ print("¡Felicidades! Adivinaste el número"+"\n")
 tiempo_final= time.time()
 tiempo_transcurrido=tiempo_final - tiempo_inicio
 print("Tiempo transcurrido: %0.10f segundos." % tiempo_transcurrido)
+print(f"El número de pasos realizados hasta adivinar el número es: {paso}")
